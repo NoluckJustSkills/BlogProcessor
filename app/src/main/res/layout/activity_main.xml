@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <import type="com.assesment.truecaller.webcontentprocessor.R"/>
+        <variable
+            name="dataBindingViewModel"
+            type="com.assesment.truecaller.webcontentprocessor.presentation.WebContentViewModel"/>
+    </data>
+
+<androidx.core.widget.NestedScrollView
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_8">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/load_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_16"
+            android:text="@string/load_from_blog" />
+
+        <TextView
+            android:id="@+id/tenth_char_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:text="@string/tenth_character"
+            android:textSize="@dimen/title_text_size"
+            android:textStyle="bold"
+            tools:text="@string/tenth_character" />
+
+        <TextView
+            android:id="@+id/tenth_char_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:background="@color/pink_50"
+            android:textSize="@dimen/content_text_size"
+            tools:text="@{dataBindingViewModel.tenthCharField}" />
+
+        <TextView
+            android:id="@+id/every_tenth_char_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_16"
+            android:text="@string/every_tenth_character"
+            android:textSize="@dimen/title_text_size"
+            android:textStyle="bold"
+            tools:text="@string/every_tenth_character" />
+
+        <TextView
+            android:id="@+id/every_tenth_char_content"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:background="@color/teal_50"
+            android:maxLines="10"
+            android:scrollbars="vertical"
+            android:textSize="@dimen/content_text_size"
+            tools:text="@{dataBindingViewModel.everyTenthCharField}" />
+
+        <TextView
+            android:id="@+id/words_count_tile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_16"
+            android:text="@string/word_counter"
+            android:textSize="@dimen/title_text_size"
+            android:textStyle="bold"
+            tools:text="@string/word_counter" />
+
+        <TextView
+            android:id="@+id/words_count_content"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:background="@color/green_50"
+            android:maxLines="10"
+            android:scrollbars="vertical"
+            android:textSize="@dimen/content_text_size"
+            tools:text="@{dataBindingViewModel.wordCountField}" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
+</layout>

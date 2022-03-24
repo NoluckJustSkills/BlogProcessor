@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Web Content Processor</string>
+    <string name="tenth_character">Tenth Character</string>
+    <string name="every_tenth_character">Every Tenth Character</string>
+    <string name="loading">Loading..</string>
+    <string name="load_from_blog">Load Data</string>
+    <string name="word_counter">Word Counter</string>
+    <string name="generic_error_message">Error while reading the blog content..Please try again.</string>
+    <string name="no_internet_connection">No Internet Connection!!</string>
+</resources>
